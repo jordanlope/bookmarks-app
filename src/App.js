@@ -3,10 +3,10 @@ import './App.css';
 
 import AddBookmark from './addBookmark/addBookmark';
 import BookmarkApp from './bookmarkApp/bookmarkApp';
+import Rating from './rating/rating';
 
 
 class App extends Component {
-
 
   constructor(props) {
     super(props);
@@ -16,25 +16,19 @@ class App extends Component {
     };
   }
 
-
   render() {
-
 
     const page = this.state.showAddForm
           ? <AddBookmark />
           : <BookmarkApp bookmarks={this.state.bookmarks}/>;
 
-
     return (
       <div className="App">
         { page }
+        <Rating value={4}/>
       </div>
     );
-
-
   }
-
-
 }
 
 export default App;
