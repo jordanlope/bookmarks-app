@@ -11,7 +11,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bookmarks: [],
+      bookmarks: [
+        {
+          title: "This is my story",
+          url: "www.mybigstory.com",
+          rating: 4,
+          description: "I love playing games and living in the dream travelling the world"
+        },
+        {
+          title: "This is your story",
+          url: "www.yourbigstory.com",
+          rating: 4,
+          description: "You love playing games and living in the dream travelling the world"
+        }
+      ],
       showAddForm: false
     };
   }

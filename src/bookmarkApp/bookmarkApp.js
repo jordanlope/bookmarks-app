@@ -4,6 +4,10 @@ import BookmarkList from '../bookmarkList/bookmarkList';
 import Fab from '../fab/fab';
 
 class BookmarkApp extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="bookmarkApp">
@@ -13,6 +17,10 @@ class BookmarkApp extends Component {
       </div>
     );
   }
+}
+
+BookmarkApp.defaultProps = {
+  bookmarks: []
 }
 
 export default BookmarkApp;

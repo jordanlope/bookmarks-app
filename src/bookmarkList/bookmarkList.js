@@ -4,11 +4,12 @@ import Bookmark from '../bookmark/bookmark';
 import PropTypes from 'prop-types';
 
 class BookmarkList extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    const bookmarks = this
-          .props
-          .bookmarks
-          .map((bookmark, i) => <Bookmark { ...bookmark } key={i}/>);
+    const bookmarks = this.props.bookmarks.map((bookmark, i) => <Bookmark { ...bookmark } key={i}/>);
     return (
       <div className="bookmarkList">
         {bookmarks}
@@ -26,8 +27,8 @@ BookmarkList.propTypes = {
   }))
 };
 
-BookmarkList.propTypes = {
-  bookmarks: PropTypes.array
-};
+BookmarkList.defaultProps = {
+  bookmarks: []
+}
 
 export default BookmarkList;
